@@ -1,4 +1,14 @@
 const defaultSize = 16;
+const defaultMode = 'color';
+
+let currentMode = defaultMode;
+
+let button = document.getElementsByClassName("button");
+let classic = document.getElementById("classic");
+let rainbow = document.getElementById("rainbow");
+let shader = document.getElementById("shader");
+let eraser = document.getElementById("eraser");
+let clear = document.getElementById("clear");
 
 let size = defaultSize;
 let repeater;
@@ -6,11 +16,27 @@ let mouseDown;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
+classic.onclick = () => setCurrentMode('classic');
+rainbow.onclick = () => setCurrentMode('rainbow');
+shader.onclick = () => setCurrentMode('shader');
+eraser.onclick = () => setCurrentMode('eraser');
+clear.onclick = () => reloadGrid();
+
 function changeColor(e) {
-    if (e.type === 'mouseover' && !mouseDown) {
-        return;
-    } else {e.target.style.backgroundColor = '#fefefe'};
-};
+    if (e.type === 'mouseover' && !mouseDown) return;
+    if (currentMode === 'rainbow') {
+        const randomR = Math.floor(Math.random() * 256)
+        const randomG = Math.floor(Math.random() * 256)
+        const randomB = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+    } else if (currentMode === 'classic') {
+        e.target.style.backgroundColor = '#fefefe'
+    } else if (currentMode === 'shader') {
+        e.target.style.backgroundColor = '#fefefe'
+    } else if (currentMode === 'eraser') {
+        e.target.style.backgroundColor = 'black'
+    };
+  };
 
 let slider = document.getElementById('myRange');
 let output = document.getElementById('demo');
@@ -24,7 +50,7 @@ slider.onchange = function() {
     output.innerHTML = `${size} X ${size}`;
     clearGrid();
     setupGrid();
-}
+};
 
 function setupGrid() {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -52,4 +78,30 @@ function clearGrid () {
 function reloadGrid () {
     clearGrid();
     setupGrid();
+};
+
+function setCurrentMode(newMode) {
+    activateButton(newMode);
+    currentMode = newMode;
+};
+
+function activateButton(newMode) {
+    if (currentMode === 'rainbow') {
+        rainbow.classList.remove('active')
+    } else if (currentMode === 'classic') {
+        classic.classList.remove('active')
+    } else if (currentMode === 'shader') {
+        shader.classList.remove('active')
+    } else if (currentMode === 'eraser') {
+        eraser.classList.remove('active')
+    };
+    if (newMode === 'rainbow') {
+        rainbow.classList.add('active')
+    } else if (newMode === 'color') {
+        classic.classList.add('active')
+    } else if (newMode === 'shader') {
+        shader.classList.add('active')
+    } else if (newMode === 'eraser') {
+        eraser.classList.add('active')
+    };
 };

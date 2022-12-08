@@ -24,9 +24,12 @@ main {
 
 .settings {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
 }
 
-.slidecontainer {
+.slide-container {
     width: 100%;
 }
 
@@ -40,6 +43,7 @@ main {
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    border-radius: 1px;
 }
 
 .slider:hover {
@@ -51,14 +55,14 @@ main {
     appearance: none;
     width: 15px;
     height: 15px;
-    background: #04AA6D;
+    background: #2567a0d6;
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background: #04AA6D;
+    background: #2567a0d6;
     cursor: pointer;
 }
 
@@ -79,4 +83,12 @@ main {
     justify-content: center;
     align-items: center;
     flex: 1;
+}
+
+.button {
+    background-color: #e8eaed;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
 }
