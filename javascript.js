@@ -1,5 +1,5 @@
 const defaultSize = 16;
-const defaultMode = 'color';
+const defaultMode = 'classic';
 
 let currentMode = defaultMode;
 
@@ -30,9 +30,15 @@ function changeColor(e) {
         const randomB = Math.floor(Math.random() * 256)
         e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
     } else if (currentMode === 'classic') {
-        e.target.style.backgroundColor = '#fefefe'
+        e.target.style.backgroundColor = '#e8eaed'
     } else if (currentMode === 'shader') {
-        e.target.style.backgroundColor = '#fefefe'
+        e.target.style.backgroundColor = '#e8eaed';
+        console.log(e.target.count)
+        e.target.count += 1;
+        console.log(e.target.count)
+        e.target.style.opacity = 0.2 * e.target.count;
+        console.log(e.target.count);
+        console.log(e.target.style.opacity);
     } else if (currentMode === 'eraser') {
         e.target.style.backgroundColor = 'black'
     };
@@ -44,10 +50,10 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
     size = this.value;
+    output.innerHTML = `${size} X ${size}`;
 };
 
 slider.onchange = function() {
-    output.innerHTML = `${size} X ${size}`;
     clearGrid();
     setupGrid();
 };
@@ -60,6 +66,7 @@ function setupGrid() {
         let gridElement = document.createElement('div');
         gridElement.classList.add('grid-element');
         gridElement.style.background = "black";
+        gridElement.count = 0;
         document.getElementById('grid').appendChild(gridElement);
         gridElement.addEventListener('mouseover', changeColor);
         gridElement.addEventListener('mousedown', changeColor);
