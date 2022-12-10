@@ -43,14 +43,11 @@ function changeColor(e) {
         e.target.style.backgroundColor = currentColor;
     } else if (currentMode === 'shader') {
         e.target.style.backgroundColor = '#e8eaed';
-        console.log(e.target.count)
         e.target.count += 1;
-        console.log(e.target.count)
         e.target.style.opacity = 0.2 * e.target.count;
-        console.log(e.target.count);
-        console.log(e.target.style.opacity);
     } else if (currentMode === 'eraser') {
-        e.target.style.backgroundColor = 'black'
+        e.target.style.backgroundColor = '#000000';
+        e.target.style.opacity = 1;
     };
   };
 
