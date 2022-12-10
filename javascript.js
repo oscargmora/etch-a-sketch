@@ -128,6 +128,7 @@ slider.oninput = function() {
 slider.onchange = function() {
     clearGrid();
     setupGrid();
+    currentMode = defaultMode;
 };
 
 // Window Load Up. Back to Defaults. //
