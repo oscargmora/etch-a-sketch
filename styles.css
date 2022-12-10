@@ -30,6 +30,20 @@ main {
     margin-top: 50px;
 }
 
+#color-picker {
+    border-radius: 3px;
+    width: 100%;
+}
+
+.button {
+    background-color: #e8eaed;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 .slide-container {
     width: 100%;
 }
@@ -66,16 +80,16 @@ main {
     cursor: pointer;
 }
 
-#grid {
-    display: grid;
-    width: 400px;
-    height: 400px;
-}
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#grid {
+    display: grid;
+    width: 400px;
+    height: 400px;
 }
 
 .footer {
@@ -83,18 +97,4 @@ main {
     justify-content: center;
     align-items: center;
     flex: 1;
-}
-
-.button {
-    background-color: #e8eaed;
-    border: none;
-    border-radius: 5px;
-    padding: 6px;
-    cursor: pointer;
-    font-family: 'Trebuchet MS', sans-serif;
-}
-
-#color-picker {
-    border-radius: 3px;
-    width: 100%;
 }
