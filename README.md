@@ -2,6 +2,8 @@
 
 This project demonstrates my skills in DOM Manipulation, as well as proficiency in HTML, CSS, and Javascript.
 
+Live Demo --> https://rodayga.github.io/etch-a-sketch/
+
 The etch-a-sketch taught me a number of valuable lessons.
 
 1) Googling is absolutely essential to a programmers job. There is no way I could have completed this without googling.
