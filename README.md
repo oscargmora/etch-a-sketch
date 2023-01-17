@@ -2,7 +2,7 @@
 
 This project demonstrates my skills in DOM Manipulation, as well as proficiency in HTML, CSS, and Javascript.
 
-Live Demo --> https://rodayga.github.io/etch-a-sketch/
+Live Demo --> https://oscargmora.github.io/etch-a-sketch/
 
 The etch-a-sketch taught me a number of valuable lessons.
 
