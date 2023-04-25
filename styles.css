@@ -1,100 +1,109 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-    background-color: #202124;
-    color: #e8eaed;
-    font-family: 'Trebuchet MS', sans-serif;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	background-color: #202124;
+	color: #e8eaed;
+	font-family: "Trebuchet MS", sans-serif;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -335px;
-    gap: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -335px;
+	gap: 200px;
 }
 
 .settings {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	margin-top: 50px;
 }
 
 #color-picker {
-    border-radius: 3px;
-    width: 100%;
+	border-radius: 3px;
+	width: 100%;
 }
 
 .button {
-    background-color: #e8eaed;
-    border: none;
-    border-radius: 5px;
-    padding: 6px;
-    cursor: pointer;
-    font-family: 'Trebuchet MS', sans-serif;
+	background-color: #e8eaed;
+	border: none;
+	border-radius: 5px;
+	padding: 6px;
+	cursor: pointer;
+	font-family: "Trebuchet MS", sans-serif;
 }
 
 .slide-container {
-    width: 100%;
+	width: 100%;
 }
 
 .slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 5px;
-    background: #264370;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #264370;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
 }
 
 .slider:hover {
-    opacity: 1;
+	opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #1679cf;
-    cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	background: #1679cf;
+	cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #1679cf;
-    cursor: pointer;
+	width: 15px;
+	height: 15px;
+	background: #1679cf;
+	cursor: pointer;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #grid {
-    display: grid;
-    width: 400px;
-    height: 400px;
+	display: grid;
+	width: 400px;
+	height: 400px;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+#github-link {
+	color: #e8eaed;
+	text-decoration: none;
+}
+
+#github-link:hover {
+	color: #acb2b9;
 }
